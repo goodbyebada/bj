@@ -18,8 +18,7 @@ int main()
 
     queue<int> q;
 
-    // while (N--)
-    for (int i = 0; i < N; i++)
+        for (int i = 0; i < N; i++)
     {
 
         cin >> command;
