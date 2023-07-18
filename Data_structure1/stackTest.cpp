@@ -8,7 +8,7 @@ int top = 0;
 void push(int *stack)
 {
 
-    *stack = stack;
+    int *stack = stack;
     // stack 은 주소
     //*stack은 값 -> stack
     //????
@@ -50,6 +50,8 @@ int main()
     for (int i = 0; i < size; i++)
     {
         scanf("%s", triger);
+        // string으로 받는게 왜..
+
         if (strcmp(triger, "push") == 0)
             push(stack);
         else if (strcmp(triger, "size") == 0)

@@ -3,6 +3,20 @@
 #include <vector>
 
 using namespace std;
+
+// 1. 스택 이용
+// 2. 원하는 애가 나올 때까지 계속 스택에 push, 오름차순이기에 cnt 카운트와 동일
+//   a. cnt > x : stack에 x가 들어가있다.
+// 3. 원하는 값이 stack에 들어갔을때 pop(), x == stack.top()
+// 4. "NO" 조건 : stack에서 pop() 하면 삭제됨, 한번 꺼낸 애는 영원히 삭제!
+// 5. 그렇기에 stack에 x가 들어가있지만, top()이 아니라면 안되는 조건
+
+// 1. 스택 사용
+// 2. x ( 입력값)이 나올때까지 stack에 계속 push, result 큐에 + push
+// 3. 스택의 top이 x와 같다면, stack.pop(), result 큐에 - push
+// 4. 아니라면 안되는 조건, NO 출력 후 바로 종료
+// 5. 반복문을 통해 result의 값들 출력
+
 int main()
 {
     stack<int> s;
