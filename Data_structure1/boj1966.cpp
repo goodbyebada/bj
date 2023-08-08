@@ -12,8 +12,8 @@ using namespace std;
     vector<int> v;
     v.insert(v.begin(), x); 앞에 삽입
     v.insert(v.end(), x); 뒤에 삽입
-    v.earse.(v.begin()); 앞에 원소 제거
-    v.earse.(v.begin() + 2); index가 2인 원소 제거
+    v.earse(v.begin()); 앞에 원소 제거
+    v.earse(v.begin() + 2); index가 2인 원소 제거
     v[x] 참조 가능
 */
 
@@ -49,6 +49,14 @@ void boj1966()
             int number;
 
             cin >> number;
+            if (index == i)
+            {
+                tmp = make_pair(number, 1);
+            }
+            else
+            {
+                tmp = make_pair(number, 0);
+            }
             tmp = make_pair(number, 0);
             v.push_back(tmp);
             // i == index 일때 1로 체크한다
