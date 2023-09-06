@@ -1,38 +1,68 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <algorithm>
 #define endl '\n'
 using namespace std;
 
-int boj()
+priority_queue<int, vector<int>, greater<int> > pq;
+
+void pushWithMax(int i, int cnt)
+{
+    while (pq.size() < cnt)
+    {
+        pq.push(i);
+    }
+    if (i > pq.top())
+    {
+        pq.pop();
+        pq.push(i);
+    }
+};
+int pqSolve()
 {
     int cnt;
     cin >> cnt;
 
-    priority_queue<int> pq;
-    // greater
+    int N = cnt * cnt;
+    // minHeap n개로 이뤄진
 
-    int num1;
-    int num2;
-    int num3;
-    int num4;
-    int num5;
+    int arr[N];
 
-    while (cnt--)
+    for (int i = 0; i < N; i++)
     {
-        cin >> num1 >> num2 >> num3 >> num4 >> num5;
-        pq.push(num1);
-        pq.push(num2);
-        pq.push(num3);
-        pq.push(num4);
-        pq.push(num5);
+        cin >> arr[i];
     }
 
-    while (cnt--)
+    for (int i = 0; i < N; i++)
     {
-        cout << pq.top();
-        pq.pop();
+        // cout << arr[i] << endl;
+        pushWithMax(arr[i], cnt);
     }
+
+    cout << pq.top();
+
+    return 0;
+}
+
+int sortBruteForce()
+{
+    int cnt;
+    cin >> cnt;
+    int arr[cnt * cnt];
+
+    for (int i = 0; i < cnt; i++)
+    {
+        for (int j = 0; j < cnt; j++)
+        {
+            cin >> arr[cnt * i + j];
+        }
+    }
+
+    sort(arr, arr + cnt * cnt);
+    cout << arr[cnt * cnt - cnt];
+
+    return 0;
 }
 
 int main()
@@ -40,6 +70,6 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    boj();
+    pqSolve();
     return 0;
 }

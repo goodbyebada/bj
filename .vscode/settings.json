@@ -62,7 +62,10 @@
     "algorithm": "cpp",
     "stack": "cpp",
     "deque": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "iomanip": "cpp",
+    "__tree": "cpp",
+    "map": "cpp"
   }
   // "C_Cpp.errorSquiggles": "disabled"
 }
