@@ -65,7 +65,9 @@
     "queue": "cpp",
     "iomanip": "cpp",
     "__tree": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "version": "cpp",
+    "set": "cpp"
   }
   // "C_Cpp.errorSquiggles": "disabled"
 }

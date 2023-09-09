@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <bits/stdc++.h>
 using namespace std;
  
@@ -66,3 +67,38 @@ int main(){
         }
     }
 }
+=======
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <queue>
+#include <stack>
+#include <set>
+
+using namespace std;
+
+/*
+둘 다 레드블랙트리 삽입/삭제/탐색 시간 복잡도 log(n)
+set 사용 -> 중복된 값을 가지지 않는다
+
+1. add p l
+2. solved p  -> 문제 삭제
+3. recommand x -> 문제 출력
+
+*/
+
+set<int> list;
+
+int boj()
+{
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    boj();
+    return 0;
+}
+>>>>>>> cc0a11e (알고리즘)
