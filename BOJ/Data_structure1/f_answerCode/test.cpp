@@ -3,15 +3,27 @@
 #include <algorithm>
 #include <queue>
 #include <stack>
+#include <map>
 using namespace std;
 
-/*
+struct info
+{
+    string mm;
+    string dd;
+    string time;
+    string obj;
+    string name;
+    int none;
+    bool flag;
+};
 
-*/
-
+/***/
 int boj()
 {
-    cout << "HI";
+    info Obj;
+    map<string, info> objInfo;
+
+    cout << objInfo["2"].flag;
 }
 
 int main()

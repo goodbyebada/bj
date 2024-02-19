@@ -11,7 +11,23 @@ using namespace std;
 
 int boj()
 {
-    cout << "HI";
+
+    int a, b, c;
+
+    int max;
+    do
+    {
+
+        int num = 3;
+        max = 0;
+        cin >> a >> b >> c;
+
+        while (num--)
+        {
+            
+        }
+
+    } while (a != 0 && b != 0 && c != 0);
 }
 
 int main()

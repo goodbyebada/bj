@@ -11,7 +11,6 @@ using namespace std;
 
 int boj()
 {
-    cout << "HI";
 }
 
 int main()

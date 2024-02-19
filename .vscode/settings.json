@@ -67,7 +67,8 @@
     "__tree": "cpp",
     "map": "cpp",
     "version": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "__availability": "cpp"
   }
   // "C_Cpp.errorSquiggles": "disabled"
 }

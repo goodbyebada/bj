@@ -11,7 +11,10 @@ using namespace std;
 
 int boj()
 {
-    cout << "HI";
+
+    int a = 100;
+    cout << a << endl;
+    
 }
 
 int main()
