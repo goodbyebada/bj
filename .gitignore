@@ -1,0 +1,15 @@
+BOJ/.vscode
+BOJ/Data_structure1/.vscode
+
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+BOJ/.vscode
+*.json
+codeTree/.DS_Store
+codeTree/.clang-format

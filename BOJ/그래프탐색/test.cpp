@@ -9,7 +9,7 @@ int main()
     // Write C++ code here
 
     // for(int i=0; i< )
-    vector<int> tmp = {1, 2};
+                vector<int> tmp = {1, 2};           
     vector<int> tmp2 = {3, 4};
     nodes.push_back(tmp);
     nodes.push_back(tmp2);

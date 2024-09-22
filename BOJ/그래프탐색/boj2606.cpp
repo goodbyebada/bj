@@ -14,7 +14,7 @@ int boj()
 {
     int N, E;
 
-    cin >> N;
+cin >> N;
     cin >> E;
 
     int N1, N2;
