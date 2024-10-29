@@ -5,8 +5,8 @@
 #include <string>
 #include <vector>
 using namespace std;
-#define X first;
-#define Y second;
+#define X first
+#define Y second
 
 /**
  * 미로 탐색
@@ -34,10 +34,11 @@ queue<pair<int, int>> Q;
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
 
-int boj() {
+void boj() {
   cin >> n >> m;
-  for (int i = 0; i < n; i++) fill(dist, dist + m, -1);
-  // 초기화
+
+  // 이차원 배열이니까
+  for (int i = 0; i < n; i++) fill(dist[i], dist[i] + m, -1);
 
   for (int i = 0; i < n; i++) {
     cin >> input;
@@ -46,22 +47,26 @@ int boj() {
     }
   }
 
-  queue<pair<int, int>> Q;
-  Q.push({0, 0});
   dist[0][0] = 0;
+  Q.push({0, 0});
 
   while (!Q.empty()) {
-    auto cur = Q.front();
+    pair<int, int> curr = Q.front();
     Q.pop();
-    for (int dir = 0; dir < 4; dir++) {
-      int nx = cur.X + dx[dir];
-      int ny = cur.Y + dy[dir];
-      if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
-      if (dist[nx][ny] >= 0 || board[nx][ny] != '1') continue;
-      dist[nx][ny] = dist[cur.X][cur.Y] + 1;
-      Q.push({nx, ny});
+
+    for (int i = 0; i < 4; i++) {
+      int x = curr.X + dx[i];
+      int y = curr.Y + dy[i];
+
+      // dist로 방문 여부를 판단한다.
+      if (board[x][y] == '0' || dist[x][y] != -1) continue;
+      if (x < 0 || y < 0 || x >= 100 || y >= 100) continue;
+
+      dist[x][y] = dist[curr.X][curr.Y] + 1;
+      Q.push({x, y});
     }
   }
+
   cout << dist[n - 1][m - 1] + 1;
 }
 
