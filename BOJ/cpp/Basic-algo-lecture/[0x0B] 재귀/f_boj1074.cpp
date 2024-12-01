@@ -3,6 +3,30 @@
 #define X first
 #define Y second
 using namespace std;
+
+/**
+ * Z
+ * 실버 1
+ */
+
+pair<int, int> pos[4] = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
+
+int recursive(int N, int r, int c) {
+  if (N == 0) return 0;
+
+  for (int i = 0; i < 4; i++) {
+    int x = 2 * (N - 1) + pos[i].X;
+    int y = 2 * (N - 1) + pos[i].Y;
+
+    cout << "( " << x << y << ")";
+
+    if (x == r && y == c) cout << (x + y);
+  }
+
+  recursive(N / 2, r, c);
+
+  return 0;
+}
 // Z 모양 순서 계산 함수
 // n: 현재 2^n x 2^n 행렬 크기의 단계
 // r: 목표 위치의 행 (row)
@@ -11,7 +35,8 @@ int func(int n, int r, int c) {
   // 기저 사례: n이 0일 경우, 시작 위치(0,0)이므로 0을 반환
   if (n == 0) return 0;
 
-  int half = 1 << (n - 1);  // 현재 행렬을 반으로 나눈 크기
+  int half = 1 << (n - 1);
+  // 현재 행렬을 반으로 나눈 크기
 
   // 1번 사분면: r < half, c < half일 때
   if (r < half && c < half) return func(n - 1, r, c);

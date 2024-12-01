@@ -2,7 +2,7 @@
 using namespace std;
 
 /**
- * 원상 복구
+ * 원상 복구(small)
  * 실버 3
  *
  * 32M

@@ -40,9 +40,11 @@ void func(int cur) {
     isused2[i + cur] = 1;
     isused3[cur - i + n - 1] = 1;
     func(cur + 1);
+
     isused1[i] = 0;
     isused2[i + cur] = 0;
     isused3[cur - i + n - 1] = 0;
+    // 나머지 나올 때는 초기화를 해야한다.
   }
 }
 

@@ -35,7 +35,7 @@ int boj() {
         if (it != L.end()) it++;
 
       } else if (c == '-') {
-        // 왜 틀렸는교
+        // 헤맸던 곳
         if (it != L.begin()) {
           it--;
           it = L.erase(it);
