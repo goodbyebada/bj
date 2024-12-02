@@ -14,3 +14,4 @@ BOJ/.vscode
 codeTree/.DS_Store
 codeTree/.clang-format
 .DS_Store
+*.txt
