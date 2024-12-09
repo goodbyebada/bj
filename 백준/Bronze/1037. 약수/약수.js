@@ -45,14 +45,12 @@ function main() {
       return a - b;
     });
 
-  console.log(numbers[0] * numbers[numbers.length - 1]);
+  let result = numbers.reduce((acc, curr) => LCM(acc, curr));
 
-  //   let result = numbers.reduce((acc, curr) => LCM(acc, curr));
-
-  //   if (result == numbers[numbers.length - 1]) {
-  //     result *= numbers[0];
-  //   }
-  //   console.log(result);
+  if (result == numbers[numbers.length - 1]) {
+    result *= numbers[0];
+  }
+  console.log(result);
 }
 
 main();
