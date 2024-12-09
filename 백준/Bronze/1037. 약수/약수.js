@@ -3,34 +3,34 @@
  * 브론즈 1
  */
 
-function GCD(a, b) {
-  let gcdA;
-  let gcdB;
+// function GCD(a, b) {
+//   let gcdA;
+//   let gcdB;
 
-  if (a > b) {
-    gcdA = a;
-    gcdB = b;
-  } else {
-    gcdA = b;
-    gcdB = a;
-  }
+//   if (a > b) {
+//     gcdA = a;
+//     gcdB = b;
+//   } else {
+//     gcdA = b;
+//     gcdB = a;
+//   }
 
-  while (1) {
-    let result = gcdA % gcdB;
+//   while (1) {
+//     let result = gcdA % gcdB;
 
-    if (result == 0) {
-      return gcdB;
-    }
+//     if (result == 0) {
+//       return gcdB;
+//     }
 
-    gcdA = gcdB;
-    gcdB = result;
-  }
-}
+//     gcdA = gcdB;
+//     gcdB = result;
+//   }
+// }
 
-function LCM(b, a) {
-  const gcd = GCD(a, b);
-  return (a * b) / gcd;
-}
+// function LCM(b, a) {
+//   const gcd = GCD(a, b);
+//   return (a * b) / gcd;
+// }
 
 function main() {
   const input = require("fs")
@@ -38,19 +38,17 @@ function main() {
     .toString()
     .split("\n");
 
-  const numbers = input[1]
-    .split(" ")
-    .map(Number)
-    .sort(function (a, b) {
-      return a - b;
-    });
+  let max = -1;
+  let min = 1_000_000;
 
-  let result = numbers.reduce((acc, curr) => LCM(acc, curr));
+  const findMaxAndMin = (a) => {
+    max = max > a ? max : a;
+    min = min < a ? min : a;
+  };
 
-  if (result == numbers[numbers.length - 1]) {
-    result *= numbers[0];
-  }
-  console.log(result);
+  input[1].split(" ").map(Number).forEach(findMaxAndMin);
+
+  console.log(max * min);
 }
 
 main();
